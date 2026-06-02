@@ -8,7 +8,35 @@ that the line count does not warrant.
 ## [Unreleased]
 
 ### Planned
-- The remaining 324,098,502,198,153,092,815,094 scripts. See [ROADMAP.md](ROADMAP.md).
+- The remaining 324,098,502,198,153,092,815,090 scripts. See [ROADMAP.md](ROADMAP.md).
+- A `fix(life)` function. Currently `pass`. Not in production because the
+  maintainer does not want the math to be off.
+
+## [0.0.2] — 2026-06-02
+
+Part 0.0.2. The published count went up by four; the remaining count went down
+by exactly four. The arithmetic agrees. The maintainer finds this deeply
+suspicious and has elected not to investigate.
+
+### Added
+- **Catalog Entry 45001** — Hydration Assertion Daemon (`script-45001`). GA.
+  Runs an unbounded loop. The glass remains full.
+- **Catalog Entry 102847** — Obligation Census Engine (`script-102847`). GA.
+  Returned 14 in 2022. Returns 261 now. Has never once gone down.
+- **Catalog Entry 788212** — Deep Work Signaling Service (`script-788212`). GA
+  behind the new `deep-work` extra. Ends your deep work in order to signal it.
+- **Catalog Entry 324098502198153092815097** — Remaining-Scope Estimator
+  (`script-324098502198153092815097`). GA. The only output the maintainer
+  concedes is correct.
+- New `deep-work` optional extra (`requests`).
+
+### Changed
+- `SCRIPTS_SHIPPED` raised from 4 to 8.
+
+### Notes
+- **May 2026** — Catalog Entry 788212 gained a confirmation print statement, so
+  the maintainer would know it ran. Reading the confirmation also ends deep
+  work. It was left in.
 
 ## [0.0.1] — 2026-06-02
 

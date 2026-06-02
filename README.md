@@ -5,7 +5,7 @@
 
 [![build](https://img.shields.io/badge/build-passing-brightgreen)](.github/workflows/ci.yml)
 [![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](#testing)
-[![scripts shipped](https://img.shields.io/badge/scripts%20shipped-4%20%2F%20324%2C098%2C502%2C198%2C153%2C092%2C815%2C098-blue)](ROADMAP.md)
+[![scripts shipped](https://img.shields.io/badge/scripts%20shipped-8%20%2F%20324%2C098%2C502%2C198%2C153%2C092%2C815%2C098-blue)](ROADMAP.md)
 [![license](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
 [![uptime](https://img.shields.io/badge/uptime-0.003s-success)](src/lifefixer/script_00002/README.md)
 [![claps](https://img.shields.io/badge/claps-50-ff69b4)](#feedback)
@@ -34,12 +34,15 @@ optional extras, so you only pay for the life you are fixing:
 
 ```bash
 pip install "lifefixer[the-script]"   # unlocks Script #44,999 (reads a CSV)
+pip install "lifefixer[deep-work]"    # unlocks Script #788,212 (Slack status)
 ```
 
 ## The Shipped Catalog
 
 Scripts are addressed by **catalog number**, not by function. Function is an
 implementation detail. The catalog is forever.
+
+### Installment 0.0.1
 
 | Catalog | Binary         | Capability                          | Status            |
 | ------- | -------------- | ----------------------------------- | ----------------- |
@@ -48,8 +51,17 @@ implementation detail. The catalog is forever.
 | [08003](src/lifefixer/script_08003/README.md) | `script-8003`  | Self-Directed Notification Pipeline | 🔴 Non-operational (intentional) |
 | [44999](src/lifefixer/script_44999/README.md) | `script-44999` | Tabular Data Ingestion & Preview    | ✅ GA (extra)     |
 
-The remaining **324,098,502,198,153,092,815,094** scripts are on the
-[roadmap](ROADMAP.md).
+### Installment 0.0.2
+
+| Catalog | Binary         | Capability                          | Status            |
+| ------- | -------------- | ----------------------------------- | ----------------- |
+| [45001](src/lifefixer/script_45001/README.md) | `script-45001` | Hydration Assertion Daemon          | ✅ GA             |
+| [102847](src/lifefixer/script_102847/README.md) | `script-102847` | Obligation Census Engine            | ✅ GA             |
+| [788212](src/lifefixer/script_788212/README.md) | `script-788212` | Deep Work Signaling Service         | ✅ GA (extra)     |
+| [324098502198153092815097](src/lifefixer/script_324098502198153092815097/README.md) | `script-324098502198153092815097` | Remaining-Scope Estimator | ✅ GA |
+
+**Shipped to date: 8.** The remaining **324,098,502,198,153,092,815,090**
+scripts are on the [roadmap](ROADMAP.md).
 
 ## Quick Start
 
@@ -58,6 +70,10 @@ script-2        # Is it the weekend? Receive an authoritative verdict.
 script-1        # Transition old_name.txt to new_name.txt.
 script-44999    # Read a CSV. Behold fire.
 script-8003     # Email yourself. (Will fail. See SECURITY.md and CHANGELOG.md.)
+script-45001    # Be reminded, hourly, to drink water. Runs forever. Ctrl-C to stop.
+script-102847   # Count your outstanding TODOs. The number does not go down.
+script-788212   # Signal deep work to Slack, thereby ending your deep work.
+script-324098502198153092815097   # Compute how many scripts remain.
 ```
 
 ## Architecture

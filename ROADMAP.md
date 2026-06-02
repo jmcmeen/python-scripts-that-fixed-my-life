@@ -8,9 +8,10 @@ paper *324,098,502,198,153,092,815,098 Python Scripts That Will Fix Your Life*.
 | Metric                  | Value                                         |
 | ----------------------- | --------------------------------------------- |
 | Total addressable scope | 324,098,502,198,153,092,815,098 scripts       |
-| Shipped to GA           | 4 scripts                                     |
-| Remaining               | 324,098,502,198,153,092,815,094 scripts       |
-| Completion              | 0.0000000000000000000012% (rounded up, generously) |
+| Shipped to GA           | 8 scripts (across two installments)           |
+| Remaining               | 324,098,502,198,153,092,815,090 scripts       |
+| Completion              | 0.0000000000000000000025% (rounded up, generously) |
+| Remaining (authoritative) | per `script-324098502198153092815097`, which the maintainer does not trust |
 
 ```
 Progress: [                                                  ] ~0%
@@ -29,16 +30,21 @@ We deliver against quarterly OKRs.
 
 ### Q4 2026 — Objective: scale the pipeline
 - **KR1:** Automate the writing of the scripts.
-- **KR2:** Stop, periodically, to write articles about automating the writing
+- **KR2:** Automate publishing. (200 lines written. They do not work. A README
+  explaining why they do not work has shipped ahead of the feature.)
+- **KR3:** Stop, periodically, to write articles about automating the writing
   of the scripts.
 
 ## Known Blocker
 
-Delivery of the remaining 324,098,502,198,153,092,815,094 scripts is currently
+Delivery of the remaining 324,098,502,198,153,092,815,090 scripts is currently
 **blocked**. Root cause: the maintainer keeps stopping to write articles about
 automating the process of writing them, which is taking longer than expected.
+Secondary blocker: the publishing pipeline is itself a manual process that has
+not yet been automated, and the Obligation Census Engine (#102847) has noticed.
 
 This blocker is not scheduled for resolution. It is, on reflection, the work.
+Current projections favor the heat death of the universe.
 
 ## Out of Scope
 
