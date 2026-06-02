@@ -1,0 +1,44 @@
+name: CI
+
+# Continuous integration for a suite of scripts whose combined logic could be
+# replaced by built-in operating system features. We run it on every push
+# anyway. The friction is the point.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-gate:
+    name: lint + acceptance (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # We test across a matrix of Python versions to guarantee that
+        # os.rename renames a file on all of them. It does.
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install the suite (with extras and dev tooling)
+        run: pip install -e ".[the-script,dev]"
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Acceptance suite
+        # The Self-Directed Notification Pipeline test (#08003) is skipped by
+        # design and must remain skipped. Do not fix it.
+        run: pytest -ra
+
+      - name: Confirm it is, or is not, the weekend
+        run: script-2

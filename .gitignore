@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Credentials for the Self-Directed Notification Pipeline (#08003).
+# Do not commit. The pipeline is broken anyway, but be professional about it.
+.env
+
+# Artifacts produced by running the scripts during local testing.
+new_name.txt
+old_name.txt
