@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lifefixer"
-version = "0.0.1"
-description = "324,098,502,198,153,092,815,098 Python scripts that will fix your life. 4 shipped. The rest are on the roadmap."
+version = "0.0.2"
+description = "324,098,502,198,153,092,815,098 Python scripts that will fix your life. 8 shipped. The rest are on the roadmap."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "CC0-1.0"
@@ -33,13 +33,15 @@ classifiers = [
 # Script #44,999 reads a CSV. Reading a CSV is a discovery on the order of fire
 # and is therefore gated behind an extra.
 the-script = ["pandas>=2.0"]
+# Script #788,212 signals deep work to Slack, briefly, before Slack ends it.
+deep-work = ["requests>=2.0"]
 # Engineering productivity tooling. Used to verify that os.rename renames.
 dev = ["pytest>=7.0", "ruff>=0.4"]
 
 [project.urls]
-Homepage = "https://github.com/johnmcmeen/python-scripts-that-fixed-my-life"
-Changelog = "https://github.com/johnmcmeen/python-scripts-that-fixed-my-life/blob/main/CHANGELOG.md"
-Roadmap = "https://github.com/johnmcmeen/python-scripts-that-fixed-my-life/blob/main/ROADMAP.md"
+Homepage = "https://github.com/jmcmeen/python-scripts-that-fixed-my-life"
+Changelog = "https://github.com/jmcmeen/python-scripts-that-fixed-my-life/blob/main/CHANGELOG.md"
+Roadmap = "https://github.com/jmcmeen/python-scripts-that-fixed-my-life/blob/main/ROADMAP.md"
 
 # Each script is delivered as a first-class, individually addressable command-
 # line binary. Scripts are named by catalog number, not by function. Function
@@ -49,6 +51,10 @@ script-1 = "lifefixer.script_00001:main"
 script-2 = "lifefixer.script_00002:main"
 script-8003 = "lifefixer.script_08003:main"
 script-44999 = "lifefixer.script_44999:main"
+script-45001 = "lifefixer.script_45001:main"
+script-102847 = "lifefixer.script_102847:main"
+script-788212 = "lifefixer.script_788212:main"
+script-324098502198153092815097 = "lifefixer.script_324098502198153092815097:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lifefixer"]

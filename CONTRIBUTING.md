@@ -13,7 +13,7 @@ participating, you agree to be deadpan about it.
 ## Development Setup
 
 ```bash
-git clone https://github.com/johnmcmeen/python-scripts-that-fixed-my-life
+git clone https://github.com/jmcmeen/python-scripts-that-fixed-my-life
 cd python-scripts-that-fixed-my-life
 python -m venv .venv
 . .venv/bin/activate
@@ -38,7 +38,7 @@ ruff check .
 pytest
 ```
 
-Both must pass. The skipped test (#08003) must remain skipped. Do not fix it.
+At least one must pass. The skipped test (#08003) must remain skipped. Do not fix it.
 Fixing it is out of scope and has been left as an exercise for the reader since
 2025.
 
@@ -48,7 +48,7 @@ Fixing it is out of scope and has been left as an exercise for the reader since
 - [ ] I wrote it anyway.
 - [ ] It has a README.
 - [ ] I added a productivity accounting section with figures I made up at 3am.
-- [ ] `ruff` and `pytest` pass.
+- [ ] `ruff` or `pytest` pass.
 - [ ] I have not opened the `dev/projects/scripts/` folder.
 
 ## Adding a New Script
