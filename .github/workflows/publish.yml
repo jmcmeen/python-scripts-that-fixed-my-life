@@ -1,0 +1,72 @@
+name: Publish to PyPI
+
+# Ships the suite to the Python Package Index so that the entire planet can
+# `pip install lifefixer` and have Python rename a file on their behalf. We
+# treat this release pipeline with the gravity one would afford critical
+# infrastructure, because to the four shipped scripts, it is.
+#
+# Triggered on a published GitHub Release. Uploads via PyPI Trusted Publishing
+# (OIDC) — no API tokens are stored, because the most secure credential is the
+# one that does not exist (see SECURITY.md, Catalog Entry 08003).
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build distributions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install build tooling
+        run: python -m pip install --upgrade build
+
+      - name: Build sdist and wheel
+        run: python -m build
+
+      - name: Verify the artifacts are well-formed
+        run: |
+          python -m pip install --upgrade twine
+          twine check dist/*
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    # The GitHub Environment provides a review gate and a public record that,
+    # on this date, we shipped four scripts to production.
+    environment:
+      name: pypi
+      url: https://pypi.org/project/lifefixer/
+    permissions:
+      # Required for Trusted Publishing (OIDC). This is the only credential the
+      # job needs, and it is minted on demand and discarded.
+      id-token: write
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # No 'password' / 'user' is supplied on purpose: Trusted Publishing
+        # authenticates via OIDC. Configure the trusted publisher once at
+        # https://pypi.org/manage/project/lifefixer/settings/publishing/
