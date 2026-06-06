@@ -5,7 +5,8 @@
 
 [![build](https://img.shields.io/badge/build-passing-brightgreen)](.github/workflows/ci.yml)
 [![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](#testing)
-[![scripts shipped](https://img.shields.io/badge/scripts%20shipped-8%20%2F%20324%2C098%2C502%2C198%2C153%2C092%2C815%2C098-blue)](ROADMAP.md)
+[![scripts shipped](https://img.shields.io/badge/scripts%20shipped-9%20%2F%20324%2C098%2C502%2C198%2C153%2C092%2C815%2C098-blue)](ROADMAP.md)
+[![perimeter](https://img.shields.io/badge/perimeter-the%20wolf%20is%20loose-critical)](src/lifefixer/script_00404/README.md)
 [![license](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
 [![uptime](https://img.shields.io/badge/uptime-0.003s-success)](src/lifefixer/script_00002/README.md)
 [![claps](https://img.shields.io/badge/claps-50-ff69b4)](#feedback)
@@ -60,7 +61,13 @@ implementation detail. The catalog is forever.
 | [788212](src/lifefixer/script_788212/README.md) | `script-788212` | Deep Work Signaling Service         | ✅ GA (extra)     |
 | [324098502198153092815097](src/lifefixer/script_324098502198153092815097/README.md) | `script-324098502198153092815097` | Remaining-Scope Estimator | ✅ GA |
 
-**Shipped to date: 8.** The remaining **324,098,502,198,153,092,815,090**
+### Installment 0.0.3
+
+| Catalog | Binary         | Capability                          | Status            |
+| ------- | -------------- | ----------------------------------- | ----------------- |
+| [00404](src/lifefixer/script_00404/README.md) | `script-404` | Apex-Predator Perimeter Containment Grid | ✅ GA (the wolf is loose) |
+
+**Shipped to date: 9.** The remaining **324,098,502,198,153,092,815,089**
 scripts are on the [roadmap](ROADMAP.md).
 
 ## Quick Start
@@ -74,6 +81,7 @@ script-45001    # Be reminded, hourly, to drink water. Runs forever. Ctrl-C to s
 script-102847   # Count your outstanding TODOs. The number does not go down.
 script-788212   # Signal deep work to Slack, thereby ending your deep work.
 script-324098502198153092815097   # Compute how many scripts remain.
+script-404      # Surveil the perimeter. The wolf is loose. (Ctrl-C to stand down.)
 ```
 
 ## Architecture
@@ -87,8 +95,20 @@ script-324098502198153092815097   # Compute how many scripts remain.
                  │            ┌────────┐                  │
                  │            │ #08003 │ (offline)        │
                  │            └────────┘                  │
+                 │   ┌────────┐                           │
+                 │   │ #00404 │ ◀── the wolf is loose     │
+                 │   └────────┘                           │
                  └───────────────────────────────────────┘
 ```
+
+Catalog Entry 00404 (`script-404`) is decomposed wildly beyond its remit:
+`PerimeterGeometry`, `EntropySource`, a `RelocationPolicy` strategy, a
+`GridCanvas`, a `TerminalSurface` context manager, and a
+`ContainmentOrchestrator`. Every docstring and inline comment in the module is,
+by design, the single sentence **the wolf is loose** — it is not a placeholder,
+it is the complete documentation. The threat marker it relocates around the
+perimeter is, for reasons reviewed and shipped, a frog. The wolf is loose. The
+frog is right there.
 
 See [docs/adr/0001-why-python-renames-the-file.md](docs/adr/0001-why-python-renames-the-file.md)
 for the foundational architecture decision.
