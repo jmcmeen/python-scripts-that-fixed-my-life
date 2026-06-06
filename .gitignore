@@ -21,3 +21,4 @@ htmlcov/
 # Artifacts produced by running the scripts during local testing.
 new_name.txt
 old_name.txt
+/.claude
