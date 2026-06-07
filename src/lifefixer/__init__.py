@@ -9,14 +9,14 @@ Scripts are addressed by their catalog number, not by their function. Function
 is an implementation detail. The catalog is forever.
 """
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 #: The total addressable script market, as committed to in the white paper.
 TOTAL_SCRIPTS = 324_098_502_198_153_092_815_098
 
-#: Scripts shipped to general availability as of this release. Eight across two
+#: Scripts shipped to general availability as of this release. Nine across three
 #: installments. The arithmetic, for once, agrees. This is treated as suspect.
-SCRIPTS_SHIPPED = 8
+SCRIPTS_SHIPPED = 9
 
 #: Scripts remaining on the roadmap. See ROADMAP.md for the delivery schedule.
 SCRIPTS_REMAINING = TOTAL_SCRIPTS - SCRIPTS_SHIPPED

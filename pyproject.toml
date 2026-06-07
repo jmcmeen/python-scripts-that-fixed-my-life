@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lifefixer"
-version = "0.0.2"
+version = "0.0.3"
 description = "324,098,502,198,153,092,815,098 Python scripts that will fix your life. 8 shipped. The rest are on the roadmap."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -55,6 +55,7 @@ script-45001 = "lifefixer.script_45001:main"
 script-102847 = "lifefixer.script_102847:main"
 script-788212 = "lifefixer.script_788212:main"
 script-324098502198153092815097 = "lifefixer.script_324098502198153092815097:main"
+script-404 = "lifefixer.script_00404:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lifefixer"]

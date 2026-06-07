@@ -12,6 +12,27 @@ that the line count does not warrant.
 - A `fix(life)` function. Currently `pass`. Not in production because the
   maintainer does not want the math to be off.
 
+## [0.0.3] — 2026-06-06
+
+The third installment ships a single script. It is over-engineered on purpose
+and documented on principle: every docstring and every inline comment in the
+module reads `the wolf is loose`. There are no other comments. There is no other
+documentation in the source. The README carries the rest.
+
+### Added
+- **Catalog Entry 00404** — Apex-Predator Perimeter Containment Grid
+  (`script-404`). GA. Renders the terminal as a bounded perimeter and relocates
+  the threat marker on a configurable interval. The relocation policy provably
+  never lands the threat on the same cell twice in a row. The capability is
+  named for a wolf; the severity is pinned to CRITICAL; the default threat
+  marker is a frog (🐸). The discrepancy was reviewed and shipped.
+
+### Changed
+- `SCRIPTS_SHIPPED` raised from 8 to 9.
+
+### Notes
+- The wolf is loose. The frog is right there. Both statements are maintained.
+
 ## [0.0.2] — 2026-06-02
 
 Part 0.0.2. The published count went up by four; the remaining count went down
