@@ -20,12 +20,12 @@ import pytest
 
 from lifefixer import script_00404
 from lifefixer.script_00404 import (
+    ContainmentSubject,
     Coordinate,
     EntropySource,
     GridCanvas,
     NonRepeatingTeleportationPolicy,
     PerimeterGeometry,
-    ContainmentSubject,
 )
 
 FROG = "\U0001f438"
@@ -143,7 +143,9 @@ def test_main_paints_the_perimeter_and_relocates_once(monkeypatch):
     def stop_sleeping(_seconds):
         raise _StandDown
 
-    monkeypatch.setattr(script_00404, "TerminalSurface", lambda *a, **k: _RecordingSurface())
+    monkeypatch.setattr(
+        script_00404, "TerminalSurface", lambda *a, **k: _RecordingSurface()
+    )
     monkeypatch.setattr(script_00404.time, "sleep", stop_sleeping)
 
     with pytest.raises(_StandDown):
